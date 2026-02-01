@@ -171,6 +171,8 @@ vim.o.confirm = true
 --  See `:help hlsearch`
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+vim.keymap.set('n', '<leader>vp', vim.cmd.Ex)
+
 -- Diagnostic Config & Keymaps
 -- See :help vim.diagnostic.Opts
 vim.diagnostic.config {
@@ -691,6 +693,7 @@ require('lazy').setup({
       end,
       formatters_by_ft = {
         lua = { 'stylua' },
+        ml = { 'ocamlformat' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
